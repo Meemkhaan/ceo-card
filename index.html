@@ -70,15 +70,12 @@
             font-weight: 600;
             font-size: 16px;
             margin-bottom: 12px;
-            border: none;
-            cursor: pointer;
             transition: opacity 0.2s ease;
         }
         .btn:hover { opacity: 0.9; }
         .btn-download {
             background-color: var(--blue);
             color: white;
-            font-family: inherit;
         }
         .btn-location {
             background-color: var(--green);
@@ -122,10 +119,10 @@
     </div>
     
     <div class="content">
-        <!-- Interactive Save Contact Trigger Button -->
-        <button id="saveContactBtn" class="btn btn-download">
+        <!-- Direct Inline Data Link triggering instant application prompt -->
+        <a id="nativeVcardLink" class="btn btn-download" href="#">
             💾 Save Contact to Phone
-        </button>
+        </a>
         
         <!-- Native Map Link -->
         <a href="https://maps.app.goo.gl/6pwGSE9hn6bb77X67" target="_blank" class="btn btn-location">
@@ -160,8 +157,8 @@
 </div>
 
 <script>
-    // Raw vCard string embedded directly to eliminate download delays
-    const vcardData = `BEGIN:VCARD
+    // Exact vCard data mapping matching CEO credentials
+    const rawVcard = `BEGIN:VCARD
 VERSION:3.0
 N:Punjoo;Abid;Hussain;;
 FN:Abid Hussain Punjoo
@@ -175,17 +172,11 @@ GEO:24.9083;67.2619
 NOTE:Map Link: https://maps.app.goo.gl/6pwGSE9hn6bb77X67
 END:VCARD`;
 
-    document.getElementById('saveContactBtn').addEventListener('click', function () {
-        // Use text/vcard MIME type to signal mobile OS to open the raw data stream instantly
-        const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
-        const url = window.URL.createObjectURL(blob);
-        
-        // Internal navigation target simulation forcing app interception
-        window.location.href = url;
-        
-        // Housekeeping memory allocation clearance
-        setTimeout(() => window.URL.revokeObjectURL(url), 200);
-    });
+    // Converts text directly to an absolute URI Data string
+    const vcardUri = "data:text/vcard;charset=utf-8," + encodeURIComponent(rawVcard);
+    
+    // Inject the structured system URI natively into the element layout execution block
+    document.getElementById("nativeVcardLink").href = vcardUri;
 </script>
 
 </body>

@@ -7,7 +7,7 @@
     <style>
         :root {
             --navy: #0f2d59;
-            --blue: #1e88e5;
+            --whatsapp: #25d366;
             --green: #2e7d32;
             --gray-bg: #f8fafc;
             --text-dark: #1e293b;
@@ -73,9 +73,10 @@
             transition: opacity 0.2s ease;
         }
         .btn:hover { opacity: 0.9; }
-        .btn-download {
-            background-color: var(--blue);
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
             color: white;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
         }
         .btn-location {
             background-color: var(--green);
@@ -119,9 +120,9 @@
     </div>
     
     <div class="content">
-        <!-- Direct Inline Data Link triggering instant application prompt -->
-        <a id="nativeVcardLink" class="btn btn-download" href="#">
-            💾 Save Contact to Phone
+        <!-- Direct Instant WhatsApp Chat Action Link -->
+        <a href="https://wa.me" target="_blank" class="btn btn-whatsapp">
+            💬 Message on WhatsApp
         </a>
         
         <!-- Native Map Link -->
@@ -155,29 +156,6 @@
         </a>
     </div>
 </div>
-
-<script>
-    // Exact vCard data mapping matching CEO credentials
-    const rawVcard = `BEGIN:VCARD
-VERSION:3.0
-N:Punjoo;Abid;Hussain;;
-FN:Abid Hussain Punjoo
-TITLE:C.E.O
-ORG:S.A.S. Pakistan (Pvt) Ltd
-TEL;TYPE=CELL,VOICE:+923002602324
-EMAIL;TYPE=PREF,INTERNET:s.a.spakistan@hotmail.com
-URL:http://saspakistan.com
-ADR;TYPE=WORK,POSTAL:;;Plot # 04 & 16, Sector C-III, Phase-I, EPZ;Karachi;;;Pakistan
-GEO:24.9083;67.2619
-NOTE:Map Link: https://maps.app.goo.gl/6pwGSE9hn6bb77X67
-END:VCARD`;
-
-    // Converts text directly to an absolute URI Data string
-    const vcardUri = "data:text/vcard;charset=utf-8," + encodeURIComponent(rawVcard);
-    
-    // Inject the structured system URI natively into the element layout execution block
-    document.getElementById("nativeVcardLink").href = vcardUri;
-</script>
 
 </body>
 </html>

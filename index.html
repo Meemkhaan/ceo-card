@@ -70,12 +70,15 @@
             font-weight: 600;
             font-size: 16px;
             margin-bottom: 12px;
+            border: none;
+            cursor: pointer;
             transition: opacity 0.2s ease;
         }
         .btn:hover { opacity: 0.9; }
         .btn-download {
             background-color: var(--blue);
             color: white;
+            font-family: inherit;
         }
         .btn-location {
             background-color: var(--green);
@@ -119,10 +122,10 @@
     </div>
     
     <div class="content">
-        <!-- Direct File Download Link -->
-        <a href="contact.vcf" class="btn btn-download" download="Abid_Hussain_Punjoo.vcf">
+        <!-- Interactive Save Contact Trigger Button -->
+        <button id="saveContactBtn" class="btn btn-download">
             💾 Save Contact to Phone
-        </a>
+        </button>
         
         <!-- Native Map Link -->
         <a href="https://maps.app.goo.gl/6pwGSE9hn6bb77X67" target="_blank" class="btn btn-location">
@@ -155,6 +158,35 @@
         </a>
     </div>
 </div>
+
+<script>
+    // Raw vCard string embedded directly to eliminate download delays
+    const vcardData = `BEGIN:VCARD
+VERSION:3.0
+N:Punjoo;Abid;Hussain;;
+FN:Abid Hussain Punjoo
+TITLE:C.E.O
+ORG:S.A.S. Pakistan (Pvt) Ltd
+TEL;TYPE=CELL,VOICE:+923002602324
+EMAIL;TYPE=PREF,INTERNET:s.a.spakistan@hotmail.com
+URL:http://saspakistan.com
+ADR;TYPE=WORK,POSTAL:;;Plot # 04 & 16, Sector C-III, Phase-I, EPZ;Karachi;;;Pakistan
+GEO:24.9083;67.2619
+NOTE:Map Link: https://maps.app.goo.gl/6pwGSE9hn6bb77X67
+END:VCARD`;
+
+    document.getElementById('saveContactBtn').addEventListener('click', function () {
+        // Use text/vcard MIME type to signal mobile OS to open the raw data stream instantly
+        const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+        const url = window.URL.createObjectURL(blob);
+        
+        // Internal navigation target simulation forcing app interception
+        window.location.href = url;
+        
+        // Housekeeping memory allocation clearance
+        setTimeout(() => window.URL.revokeObjectURL(url), 200);
+    });
+</script>
 
 </body>
 </html>

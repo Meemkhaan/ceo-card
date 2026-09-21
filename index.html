@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abid Hussain Punjoo - S.A.S. Pakistan (Pvt) Ltd</title>
+    <style>
+        :root {
+            --navy: #0f2d59;
+            --blue: #1e88e5;
+            --green: #2e7d32;
+            --gray-bg: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--gray-bg);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .vcard-wrapper {
+            background: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(15, 45, 89, 0.1);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--navy) 0%, #1e40af 100%);
+            padding: 35px 25px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .header .job-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #93c5fd;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .header .company-name {
+            font-size: 15px;
+            color: #e2e8f0;
+        }
+        .content {
+            padding: 25px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 12px;
+            transition: opacity 0.2s ease;
+        }
+        .btn:hover { opacity: 0.9; }
+        .btn-download {
+            background-color: var(--blue);
+            color: white;
+        }
+        .btn-location {
+            background-color: var(--green);
+            color: white;
+            margin-bottom: 24px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+            text-decoration: none;
+            color: inherit;
+        }
+        .contact-item:last-child { border-bottom: none; }
+        .icon {
+            font-size: 20px;
+            margin-right: 12px;
+            width: 24px;
+            text-align: center;
+        }
+        .details .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            letter-spacing: 0.5px;
+        }
+        .details .value {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="vcard-wrapper">
+    <div class="header">
+        <h1>Abid Hussain Punjoo</h1>
+        <div class="job-title">C.E.O</div>
+        <div class="company-name">S.A.S. Pakistan (Pvt) Ltd</div>
+    </div>
+    
+    <div class="content">
+        <!-- Direct File Download Link -->
+        <a href="contact.vcf" class="btn btn-download" download="Abid_Hussain_Punjoo.vcf">
+            💾 Save Contact to Phone
+        </a>
+        
+        <!-- Native Map Link -->
+        <a href="https://maps.app.goo.gl/6pwGSE9hn6bb77X67" target="_blank" class="btn btn-location">
+            📍 Open Office Location
+        </a>
+
+        <!-- Communication Protocols -->
+        <a href="tel:+923002602324" class="contact-item">
+            <span class="icon">📞</span>
+            <div class="details">
+                <div class="label">Mobile Phone</div>
+                <div class="value">+92 300 2602324</div>
+            </div>
+        </a>
+
+        <a href="mailto:s.a.spakistan@hotmail.com" class="contact-item">
+            <span class="icon">✉️</span>
+            <div class="details">
+                <div class="label">Email Address</div>
+                <div class="value">s.a.spakistan@hotmail.com</div>
+            </div>
+        </a>
+
+        <a href="http://saspakistan.com" target="_blank" class="contact-item">
+            <span class="icon">🌐</span>
+            <div class="details">
+                <div class="label">Corporate Website</div>
+                <div class="value">saspakistan.com</div>
+            </div>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

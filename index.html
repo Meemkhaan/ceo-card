@@ -135,11 +135,14 @@
             justify-content: center;
 
             background: white;
-            color: var(--navy);
+            overflow: hidden;
+            padding: 4px;
+        }
 
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: .5px;
+        .brand-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .brand-text {
@@ -204,14 +207,17 @@
             align-items: center;
             justify-content: center;
 
-            color: var(--navy);
-
-            font-size: 25px;
-            font-weight: 900;
-            letter-spacing: 1px;
+            overflow: hidden;
+            padding: 12px;
 
             box-shadow:
                 0 12px 35px rgba(0,0,0,.22);
+        }
+
+        .profile-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .profile-name {
@@ -684,9 +690,9 @@
 
         <div class="brand">
 
-            <!-- Replace with actual SAS logo -->
+            <!-- Company Logo in Top Bar -->
             <div class="brand-mark">
-                SAS
+                <img src="assets/sas-pakistan-logo.png" alt="S.A.S. Pakistan Logo">
             </div>
 
             <div class="brand-text">
@@ -712,9 +718,9 @@
 
         <section class="profile">
 
-            <!-- Replace this with actual company logo -->
+            <!-- Company Logo in Profile -->
             <div class="profile-logo">
-                SAS
+                <img src="assets/sas-pakistan-logo.png" alt="S.A.S. Pakistan Logo">
             </div>
 
             <h1 class="profile-name">
@@ -862,7 +868,7 @@
                         </div>
 
                         <div class="location-address">
-                            Plot S-4 & 6, Sector C-III, KEPZ,
+                            Plot S-4 & 6, Sector C-III, KEPZ,<br>
                             Landhi Industrial Area, Karachi
                         </div>
 
@@ -889,7 +895,6 @@
 
                 <div class="contact-list">
 
-
                     <!-- Mobile -->
 
                     <a
@@ -907,126 +912,15 @@
                                 stroke-width="2"
                             >
                                 <path
-                                    d="M22 16.9v3
-                                       a2 2 0 0 1-2.2 2
-                                       19.8 19.8 0 0 1-8.6-3.1
-                                       19.5 19.5 0 0 1-6-6
-                                       A19.8 19.8 0 0 1 2.1 4.2
-                                       2 2 0 0 1 4.1 2h3
-                                       a2 2 0 0 1 2 1.7
-                                       c.1 1 .3 2 .7 2.9
-                                       a2 2 0 0 1-.5 2.1L8 10
-                                       a16 16 0 0 0 6 6l1.3-1.3
-                                       a2 2 0 0 1 2.1-.5
-                                       c.9.4 1.9.6 2.9.7
-                                       A2 2 0 0 1 22 16.9Z"
+                                    d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z"
                                 />
                             </svg>
 
                         </div>
 
                         <div class="contact-info">
-
-                            <div class="contact-label">
-                                Mobile
-                            </div>
-
-                            <div class="contact-value">
-                                +92 300 2602324
-                            </div>
-
-                        </div>
-
-                    </a>
-
-
-                    <!-- Email -->
-
-                    <a
-                        class="contact-item"
-                        href="mailto:s.a.spakistan@hotmail.com"
-                    >
-
-                        <div class="contact-icon">
-
-                            <svg
-                                class="nav-icon"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <rect
-                                    x="3"
-                                    y="5"
-                                    width="18"
-                                    height="14"
-                                    rx="2"
-                                />
-
-                                <path
-                                    d="m3 7 9 6 9-6"
-                                />
-                            </svg>
-
-                        </div>
-
-                        <div class="contact-info">
-
-                            <div class="contact-label">
-                                Email
-                            </div>
-
-                            <div class="contact-value">
-                                s.a.spakistan@hotmail.com
-                            </div>
-
-                        </div>
-
-                    </a>
-
-
-                    <!-- Website -->
-
-                    <a
-                        class="contact-item"
-                        href="https://saspakistan.com"
-                        target="_blank"
-                        rel="noopener"
-                    >
-
-                        <div class="contact-icon">
-
-                            <svg
-                                class="nav-icon"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <circle cx="12" cy="12" r="9"/>
-
-                                <path
-                                    d="M3 12h18M12 3
-                                       c2.2 2.4 3.4 5.4 3.4 9
-                                       s-1.2 6.6-3.4 9
-                                       c-2.2-2.4-3.4-5.4-3.4-9
-                                       S9.8 5.4 12 3Z"
-                                />
-                            </svg>
-
-                        </div>
-
-                        <div class="contact-info">
-
-                            <div class="contact-label">
-                                Website
-                            </div>
-
-                            <div class="contact-value">
-                                saspakistan.com
-                            </div>
-
+                            <div class="contact-label">Mobile / WhatsApp</div>
+                            <div class="contact-value">+92 300 2602324</div>
                         </div>
 
                     </a>
@@ -1037,74 +931,42 @@
 
 
             <!-- =========================
-                 SAVE CONTACT
+                 SAVE CONTACT BUTTON
             ========================== -->
 
             <section class="section">
 
-                <button
-                    class="save-contact"
-                    onclick="saveContact()"
-                >
-
-                    <svg
-                        width="21"
-                        height="21"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path
-                            d="M16 21v-2
-                               a4 4 0 0 0-4-4H6
-                               a4 4 0 0 0-4 4v2"
-                        />
-
-                        <circle
-                            cx="9"
-                            cy="7"
-                            r="4"
-                        />
-
-                        <path
-                            d="M19 8v6M16 11h6"
-                        />
+                <button class="save-contact" onclick="downloadVCard()">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                        <polyline points="17 21 17 13 7 13 7 21"/>
+                        <polyline points="7 3 7 8 15 8"/>
                     </svg>
-
-                    Save Contact
-
+                    Save to Contacts
                 </button>
 
                 <div class="save-note">
-                    Save Abid Hussain Punjoo directly to your phone contacts.
+                    Tap to save Abid Hussain Punjoo's contact information to your phone.
                 </div>
 
             </section>
 
 
             <!-- =========================
-                 COMPANY
+                 COMPANY PROFILE
             ========================== -->
 
             <section class="section">
 
                 <div class="section-title">
-                    Organization
+                    Company
                 </div>
 
                 <div class="company-card">
-
-                    <div class="company-name">
-                        S.A.S. Pakistan (Pvt) Ltd
-                    </div>
-
+                    <div class="company-name">S.A.S. Pakistan (Pvt) Ltd</div>
                     <div class="company-description">
-                        Import, sorting, grading, processing and export
-                        of used clothing, used shoes and related textile
-                        waste and scrap products.
+                        Leading importer, processor, and exporter of graded used clothing, footwear, and textile materials. Operating out of Karachi Export Processing Zone (KEPZ).
                     </div>
-
                 </div>
 
             </section>
@@ -1115,223 +977,73 @@
 
 
     <!-- =========================
-         BOTTOM NAV
+         BOTTOM NAVIGATION
     ========================== -->
 
     <nav class="bottom-nav">
-
         <div class="nav-inner">
-
-
-            <!-- Home -->
-
-            <button
-                class="nav-item active"
-                onclick="scrollToTop()"
-            >
-
-                <svg
-                    class="nav-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                >
-                    <path
-                        d="m3 10 9-7 9 7v10
-                           a2 2 0 0 1-2 2H5
-                           a2 2 0 0 1-2-2Z"
-                    />
-
-                    <path
-                        d="M9 22v-8h6v8"
-                    />
+            <button class="nav-item active">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
                 </svg>
-
-                Home
-
+                Card
             </button>
 
-
-            <!-- Contact -->
-
-            <button
-                class="nav-item"
-                onclick="scrollToContact()"
-            >
-
-                <svg
-                    class="nav-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                >
-                    <circle
-                        cx="12"
-                        cy="8"
-                        r="4"
-                    />
-
-                    <path
-                        d="M4 21
-                           a8 8 0 0 1 16 0"
-                    />
+            <button class="nav-item" onclick="downloadVCard()">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-
-                Contact
-
+                Save
             </button>
 
-
-            <!-- Save -->
-
-            <button
-                class="nav-item"
-                onclick="saveContact()"
-            >
-
-                <svg
-                    class="nav-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                >
-                    <path
-                        d="M16 21v-2
-                           a4 4 0 0 0-4-4H6
-                           a4 4 0 0 0-4 4v2"
-                    />
-
-                    <circle
-                        cx="9"
-                        cy="7"
-                        r="4"
-                    />
-
-                    <path
-                        d="M19 8v6M16 11h6"
-                    />
+            <a class="nav-item" href="https://wa.me/923002602324" target="_blank" rel="noopener">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.3 8.3 0 0 1-4.1-1.1L3 20l1.2-5.1A8.3 8.3 0 0 1 3 10.8 8.5 8.5 0 0 1 21 11.5Z"/>
                 </svg>
-
-                Save Contact
-
-            </button>
-
+                Message
+            </a>
         </div>
-
     </nav>
 
 
-    <!-- Toast -->
-
-    <div
-        id="toast"
-        class="toast"
-    >
-        Contact file downloaded
-    </div>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Contact file downloaded!</div>
 
 </div>
 
-
 <script>
-    /* ==========================================
-       SAVE CONTACT
-    ========================================== */
+    function downloadVCard() {
+        const vcardData = `BEGIN:VCARD
+VERSION:3.0
+N:Punjoo;Abid;Hussain;;
+FN:Abid Hussain Punjoo
+ORG:S.A.S. Pakistan (Pvt) Ltd
+TITLE:C.E.O
+TEL;TYPE=CELL,VOICE:+923002602324
+ADR;TYPE=WORK:;;Plot S-4 & 6, Sector C-III, KEPZ, Landhi Industrial Area;Karachi;;;Pakistan
+END:VCARD`;
 
-    function saveContact() {
-
-        const vcard = [
-            "BEGIN:VCARD",
-            "VERSION:3.0",
-            "FN:Abid Hussain Punjoo",
-            "N:Punjoo;Abid Hussain;;;",
-            "ORG:S.A.S. Pakistan (Pvt) Ltd",
-            "TITLE:C.E.O",
-            "TEL;TYPE=CELL:+923002602324",
-            "EMAIL;TYPE=WORK:s.a.spakistan@hotmail.com",
-            "URL:https://saspakistan.com",
-            "ADR;TYPE=WORK:;;Plot S-4 & 6, Sector C-III, KEPZ, Landhi Industrial Area, Karachi-75150, Pakistan",
-            "END:VCARD"
-        ].join("\r\n");
-
-
-        const blob = new Blob(
-            [vcard],
-            {
-                type: "text/vcard;charset=utf-8"
-            }
-        );
-
-
+        const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
         const url = URL.createObjectURL(blob);
-
-        const link = document.createElement("a");
-
+        const link = document.createElement('a');
         link.href = url;
-        link.download = "Abid-Hussain-Punjoo.vcf";
-
+        link.setAttribute('download', 'Abid_Hussain_Punjoo.vcf');
         document.body.appendChild(link);
-
         link.click();
-
         document.body.removeChild(link);
 
-        URL.revokeObjectURL(url);
-
-        showToast("Contact file downloaded");
+        showToast();
     }
 
-
-    /* ==========================================
-       TOAST
-    ========================================== */
-
-    function showToast(message) {
-
-        const toast =
-            document.getElementById("toast");
-
-        toast.textContent = message;
-
-        toast.classList.add("show");
-
+    function showToast() {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
         setTimeout(() => {
-            toast.classList.remove("show");
-        }, 2500);
-    }
-
-
-    /* ==========================================
-       HOME
-    ========================================== */
-
-    function scrollToTop() {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    }
-
-
-    /* ==========================================
-       CONTACT
-    ========================================== */
-
-    function scrollToContact() {
-
-        const contact =
-            document.querySelector(".contact-list");
-
-        if (!contact) return;
-
-        contact.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
+            toast.classList.remove('show');
+        }, 3000);
     }
 </script>
 
